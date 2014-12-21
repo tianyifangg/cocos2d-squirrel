@@ -1,7 +1,7 @@
 cocos2d-squirrel
 =========
 
-Cocos2d-x squirrel binding.  
+Cocos2d-x(3.3) squirrel binding.  
 Working in progress.
 
 
