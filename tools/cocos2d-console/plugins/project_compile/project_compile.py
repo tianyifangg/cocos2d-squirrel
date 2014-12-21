@@ -374,6 +374,8 @@ class CCPluginCompile(cocos.CCPlugin):
         if not self._compile_script:
             return
 
+        return
+        '''
         cocos_cmd_path = os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), "cocos")
         rm_ext = ".nut"
         compile_cmd = "\"%s\" sqcompile -s \"%s\" -d \"%s\"" % (cocos_cmd_path, src_dir, dst_dir)
@@ -383,6 +385,7 @@ class CCPluginCompile(cocos.CCPlugin):
 
         # remove the source scripts
         self._remove_file_with_ext(dst_dir, rm_ext)
+        '''
 
     def add_warning_at_end(self, warning_str):
         if warning_str is None or len(warning_str) == 0:
@@ -621,11 +624,12 @@ class CCPluginCompile(cocos.CCPlugin):
                 self.compile_lua_scripts(script_src_dir, script_src_dir, False)
                 need_reset_dir = True
 
-            if self._project._is_sq_project() and self._sq_encrypt:
+            if self._project._is_sq_project():# and self._sq_encrypt:
                 # on iOS, only invoke sqcompile when squirrel encrypt is specified
-                self.backup_dir(script_src_dir)
-                self.compile_sq_scripts(script_src_dir, script_src_dir, False)
-                need_reset_dir = True
+                None
+#                self.backup_dir(script_src_dir)
+#                self.compile_sq_scripts(script_src_dir, script_src_dir, False)
+#                need_reset_dir = True
 
         try:
             cocos.Logging.info("building")

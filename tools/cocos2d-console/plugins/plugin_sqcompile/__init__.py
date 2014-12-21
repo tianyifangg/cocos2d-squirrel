@@ -145,8 +145,9 @@ class CCPluginSqCompile(cocos.CCPlugin):
 
     def get_output_file_path(self, sqfile):
         """
-        Gets output file path by source lua file
+        Gets output file path by source squirrel file
         """
+        '''
         # create folder for generated file
         luac_filepath = ""
         # Unknow to remove 'c' 
@@ -164,16 +165,21 @@ class CCPluginSqCompile(cocos.CCPlugin):
 
         # print "return luac path: "+luac_filepath
         return luac_filepath
+        '''
+        return None
 
     def compile_sq(self, lua_file, output_file):
         """
         Compiles squirrel file
         """
-        cocos.Logging.debug("compiling lua (%s) to bytecode..." % lua_file)
+
+        '''
+        cocos.Logging.debug("compiling squirrel (%s) to bytecode..." % lua_file)
 
         with cocos.pushd(self._luajit_dir):
             cmd_str = "\"%s\" -b \"%s\" \"%s\"" % (self._luajit_exe_path, lua_file, output_file)
             self._run_cmd(cmd_str)
+        '''
 
     # TODO
     # def compress_js(self):
@@ -193,12 +199,13 @@ class CCPluginSqCompile(cocos.CCPlugin):
     # def _lua_filename_compare(self, a, b, files, delta):
     # def reorder_lua_files(self):
 
-    def handle_all_lua_files(self):
+    def handle_all_sq_files(self):
         """
         Arguments:
         - `self`:
         """
 
+        '''
         cocos.Logging.info("processing lua script files")
         index = 0
         for src_dir in self._src_dir_arr:
@@ -218,6 +225,7 @@ class CCPluginSqCompile(cocos.CCPlugin):
                     bytesFile.write(encryBytes)
                     bytesFile.close()
                     index = index + 1
+        '''
 
 
 
@@ -236,10 +244,10 @@ class CCPluginSqCompile(cocos.CCPlugin):
         # deep iterate the src directory
         for src_dir in self._src_dir_arr:
             self._current_src_dir = src_dir
-            self._lua_files[self._current_src_dir] = []
+            self._sq_files[self._current_src_dir] = []
             self.deep_iterate_dir(src_dir)
 
-        self.handle_all_lua_files()
+        self.handle_all_sq_files()
 
         cocos.Logging.info("compilation finished")
 
@@ -249,7 +257,7 @@ class CCPluginSqCompile(cocos.CCPlugin):
 
         from optparse import OptionParser
 
-        parser = OptionParser("usage: %prog luacompile -s src_dir -d dst_dir -v")
+        parser = OptionParser("usage: %prog sqcompile -s src_dir -d dst_dir -v")
 
         parser.add_option("-v", "--verbose",
                           action="store_true",
@@ -257,10 +265,10 @@ class CCPluginSqCompile(cocos.CCPlugin):
                           help="verbose output")
         parser.add_option("-s", "--src",
                           action="append", type="string", dest="src_dir_arr",
-                          help="source directory of lua files needed to be compiled, supports mutiple source directory")
+                          help="source directory of squirrel files needed to be compiled, supports mutiple source directory")
         parser.add_option("-d", "--dst",
                           action="store", type="string", dest="dst_dir",
-                          help="destination directory of lua bytecode files to be stored")
+                          help="destination directory of squirrel bytecode files to be stored")
         parser.add_option("-e", "--encrypt",
                           action="store_true", dest="encrypt",default=False,
                           help="Whether or not to encrypt")
