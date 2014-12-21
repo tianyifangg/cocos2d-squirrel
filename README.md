@@ -1,7 +1,7 @@
 cocos2d-squirrel
 =========
 
-Cocos2d-x squirrel binding.  
+Cocos2d-x(3.3) squirrel binding.  
 Working in progress.
 
 
@@ -15,7 +15,7 @@ How to start a new game
 Example:
 
     $ git clone https://github.com/tkyaji/cocos2d-squirrel.git
-    $ cd cocos2d-x
+    $ cd cocos2d-squirrel
     $ ./setup.py
     $ source FILE_TO_SAVE_SYSTEM_VARIABLE
     $ cocos new MyGame -p com.your_company.mygame -l sq -d NEW_PROJECTS_DIR
