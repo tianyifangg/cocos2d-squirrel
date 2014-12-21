@@ -1,0 +1,29 @@
+
+--------------------------------
+-- @module EaseCircleActionIn
+-- @extend ActionEase
+-- @parent_module cc
+
+--------------------------------
+-- @function [parent=#EaseCircleActionIn] create 
+-- @param self
+-- @param #cc.ActionInterval actioninterval
+-- @return EaseCircleActionIn#EaseCircleActionIn ret (return value: cc.EaseCircleActionIn)
+        
+--------------------------------
+-- @function [parent=#EaseCircleActionIn] clone 
+-- @param self
+-- @return EaseCircleActionIn#EaseCircleActionIn ret (return value: cc.EaseCircleActionIn)
+        
+--------------------------------
+-- @function [parent=#EaseCircleActionIn] update 
+-- @param self
+-- @param #float float
+-- @return void#void ret (return value: void)
+        
+--------------------------------
+-- @function [parent=#EaseCircleActionIn] reverse 
+-- @param self
+-- @return EaseCircleActionIn#EaseCircleActionIn ret (return value: cc.EaseCircleActionIn)
+        
+return nil

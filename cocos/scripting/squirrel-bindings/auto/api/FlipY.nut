@@ -1,0 +1,29 @@
+
+--------------------------------
+-- @module FlipY
+-- @extend ActionInstant
+-- @parent_module cc
+
+--------------------------------
+-- @function [parent=#FlipY] create 
+-- @param self
+-- @param #bool bool
+-- @return FlipY#FlipY ret (return value: cc.FlipY)
+        
+--------------------------------
+-- @function [parent=#FlipY] clone 
+-- @param self
+-- @return FlipY#FlipY ret (return value: cc.FlipY)
+        
+--------------------------------
+-- @function [parent=#FlipY] update 
+-- @param self
+-- @param #float float
+-- @return void#void ret (return value: void)
+        
+--------------------------------
+-- @function [parent=#FlipY] reverse 
+-- @param self
+-- @return FlipY#FlipY ret (return value: cc.FlipY)
+        
+return nil
