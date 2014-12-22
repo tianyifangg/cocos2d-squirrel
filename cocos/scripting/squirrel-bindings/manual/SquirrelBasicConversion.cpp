@@ -1729,7 +1729,7 @@ void set_squirrel_object(HSQUIRRELVM vm, int lo, cocos2d::Ref *ref, const char *
     }
 }
 
-bool call_squirrel_closure(HSQUIRRELVM vm, int lo, const char *funcName)
+bool call_squirrel_closure(HSQUIRRELVM vm, int lo, const char *funcName, bool check)
 {
     bool ok = false;
     sq_pushstring(vm, _SC(funcName), -1);
@@ -1741,6 +1741,10 @@ bool call_squirrel_closure(HSQUIRRELVM vm, int lo, const char *funcName)
             }
         }
         sq_poptop(vm);
+    }
+    if (check && ! ok) {
+        CCLOG("Call a function named \"%s\".", funcName);
+        CCASSERT(false, "This function is not exists.");
     }
     return ok;
 }

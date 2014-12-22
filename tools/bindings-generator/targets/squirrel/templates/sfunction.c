@@ -67,7 +67,7 @@ SQInteger ${signature_name}_static(HSQUIRRELVM vm)
             _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
             sqobj->addClosure("${callback_str}", ${callback_str});
             #end for
-            call_squirrel_closure(vm, - 1, "init");
+            call_squirrel_closure(vm, - 1, "constructor", false);
         }
 #else
         ${ret_type.from_native({"generator": $generator,

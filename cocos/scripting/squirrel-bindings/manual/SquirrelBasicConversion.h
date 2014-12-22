@@ -601,6 +601,6 @@ SQInteger squirrel_releasehook_Sprite3DData(SQUserPointer p, SQInteger size);
 
 void set_squirrel_object(HSQUIRRELVM vm, int lo, cocos2d::Ref *ref, const char *sq_class_name);
 
-bool call_squirrel_closure(HSQUIRRELVM vm, int lo, const char *funcName);
+bool call_squirrel_closure(HSQUIRRELVM vm, int lo, const char *funcName, bool check = true);
 
 #endif /* defined(__cocos2d_lua_bindings__SquirrelBasicConversion__) */

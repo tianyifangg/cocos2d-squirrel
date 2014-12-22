@@ -11,6 +11,10 @@ class HelloWorld extends cc.Layer {
         return scene
     }
 
+    constructor() {
+        this.init()
+    }
+
     function init() {
 
         local visibleSize = cc.Director.getInstance().getVisibleSize()

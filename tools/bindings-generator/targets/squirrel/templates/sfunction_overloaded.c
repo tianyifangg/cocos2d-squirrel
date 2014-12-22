@@ -115,7 +115,7 @@ SQInteger ${signature_name}_static(HSQUIRRELVM vm)
                 sqobj->addClosure("${callback_str}", ${callback_str});
                 #end for
 
-##                call_squirrel_closure(vm, - 1, "constructor");
+                call_squirrel_closure(vm, - 1, "constructor", false);
             }
 #else
             ${func.ret_type.from_native({"generator": $generator,
