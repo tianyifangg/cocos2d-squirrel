@@ -296,6 +296,19 @@
 -- @return Label#Label ret (return value: cc.Label)
         
 --------------------------------
+-- @overload self, cc._ttfConfig, string, int, int         
+-- @overload self, string, string, float, size_table, int, int         
+-- @function [parent=#Label] createWithTTF
+-- @param self
+-- @param #string str
+-- @param #string str
+-- @param #float float
+-- @param #size_table size
+-- @param #int texthalignment
+-- @param #int textvalignment
+-- @return Label#Label ret (retunr value: cc.Label)
+
+--------------------------------
 -- @function [parent=#Label] draw 
 -- @param self
 -- @param #cc.Renderer renderer

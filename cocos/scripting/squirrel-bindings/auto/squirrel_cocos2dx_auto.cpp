@@ -17791,6 +17791,312 @@ SQInteger squirrel_cocos2dx_Label_createWithSystemFont_static(HSQUIRRELVM vm)
     CCLOG("%s has wrong number of arguments: %d, was expecting %d\n ", "createWithSystemFont", (int)argc, 3);
     return 0;
 }
+SQInteger squirrel_cocos2dx_Label_createWithTTF_static(HSQUIRRELVM vm)
+{
+    SQInteger argc = 0;
+    bool ok  = true;
+
+
+    argc = sq_gettop(vm) - 1;
+
+    do 
+    {
+        if (sq_gettype(vm, 1) != OT_CLASS) {
+            break;
+        }
+        if (argc == 2)
+        {
+
+            if (sq_gettype(vm, 2) != OT_INSTANCE || ! instanceof_cclass(vm, 2, "cocos2d::_ttfConfig")) {
+                break;
+            }
+            if (sq_gettype(vm, 3) != OT_STRING) {
+                break;
+            }
+
+            cocos2d::_ttfConfig arg0;
+            cocos2d::_ttfConfig *ptr2 = nullptr; ok &= sqval_to_ttfconfig(vm, 2, ptr2); arg0 = *ptr2;
+            if (!ok) { break; }
+            std::string arg1;
+            ok &= sqval_to_std_string(vm, 3, &arg1);
+            if (!ok) { break; }
+            cocos2d::Label* ret = cocos2d::Label::createWithTTF(arg0, arg1);
+            if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
+                sq_setinstanceup(vm, -1, (SQUserPointer)ret);
+                set_squirrel_object(vm, -1, ret, "cc.Label");
+
+            }
+            return 1;
+        }
+    } while (0);
+    ok  = true;
+    do 
+    {
+        if (sq_gettype(vm, 1) != OT_CLASS) {
+            break;
+        }
+        if (argc == 3)
+        {
+
+            if (sq_gettype(vm, 2) != OT_INSTANCE || ! instanceof_cclass(vm, 2, "cocos2d::_ttfConfig")) {
+                break;
+            }
+            if (sq_gettype(vm, 3) != OT_STRING) {
+                break;
+            }
+            if (sq_gettype(vm, 4) != OT_INSTANCE || ! instanceof_cclass(vm, 4, "cocos2d::TextHAlignment")) {
+                break;
+            }
+
+            cocos2d::_ttfConfig arg0;
+            cocos2d::_ttfConfig *ptr2 = nullptr; ok &= sqval_to_ttfconfig(vm, 2, ptr2); arg0 = *ptr2;
+            if (!ok) { break; }
+            std::string arg1;
+            ok &= sqval_to_std_string(vm, 3, &arg1);
+            if (!ok) { break; }
+            cocos2d::TextHAlignment arg2;
+            ok &= sqval_to_int32(vm, 4, (int *)&arg2);
+            if (!ok) { break; }
+            cocos2d::Label* ret = cocos2d::Label::createWithTTF(arg0, arg1, arg2);
+            if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
+                sq_setinstanceup(vm, -1, (SQUserPointer)ret);
+                set_squirrel_object(vm, -1, ret, "cc.Label");
+
+            }
+            return 1;
+        }
+    } while (0);
+    ok  = true;
+    do 
+    {
+        if (sq_gettype(vm, 1) != OT_CLASS) {
+            break;
+        }
+        if (argc == 4)
+        {
+
+            if (sq_gettype(vm, 2) != OT_INSTANCE || ! instanceof_cclass(vm, 2, "cocos2d::_ttfConfig")) {
+                break;
+            }
+            if (sq_gettype(vm, 3) != OT_STRING) {
+                break;
+            }
+            if (sq_gettype(vm, 4) != OT_INSTANCE || ! instanceof_cclass(vm, 4, "cocos2d::TextHAlignment")) {
+                break;
+            }
+            if (sq_gettype(vm, 5) != OT_INTEGER && sq_gettype(vm, 5) != OT_FLOAT) {
+                break;
+            }
+
+            cocos2d::_ttfConfig arg0;
+            cocos2d::_ttfConfig *ptr2 = nullptr; ok &= sqval_to_ttfconfig(vm, 2, ptr2); arg0 = *ptr2;
+            if (!ok) { break; }
+            std::string arg1;
+            ok &= sqval_to_std_string(vm, 3, &arg1);
+            if (!ok) { break; }
+            cocos2d::TextHAlignment arg2;
+            ok &= sqval_to_int32(vm, 4, (int *)&arg2);
+            if (!ok) { break; }
+            int arg3;
+            ok &= sqval_to_int32(vm, 5, (int *)&arg3);
+            if (!ok) { break; }
+            cocos2d::Label* ret = cocos2d::Label::createWithTTF(arg0, arg1, arg2, arg3);
+            if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
+                sq_setinstanceup(vm, -1, (SQUserPointer)ret);
+                set_squirrel_object(vm, -1, ret, "cc.Label");
+
+            }
+            return 1;
+        }
+    } while (0);
+    ok  = true;
+    do 
+    {
+        if (sq_gettype(vm, 1) != OT_CLASS) {
+            break;
+        }
+        if (argc == 3)
+        {
+
+            if (sq_gettype(vm, 2) != OT_STRING) {
+                break;
+            }
+            if (sq_gettype(vm, 3) != OT_STRING) {
+                break;
+            }
+            if (sq_gettype(vm, 4) != OT_INTEGER && sq_gettype(vm, 4) != OT_FLOAT) {
+                break;
+            }
+
+            std::string arg0;
+            ok &= sqval_to_std_string(vm, 2, &arg0);
+            if (!ok) { break; }
+            std::string arg1;
+            ok &= sqval_to_std_string(vm, 3, &arg1);
+            if (!ok) { break; }
+            float arg2;
+            ok &= sqval_to_float(vm, 4, &arg2);
+            if (!ok) { break; }
+            cocos2d::Label* ret = cocos2d::Label::createWithTTF(arg0, arg1, arg2);
+            if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
+                sq_setinstanceup(vm, -1, (SQUserPointer)ret);
+                set_squirrel_object(vm, -1, ret, "cc.Label");
+
+            }
+            return 1;
+        }
+    } while (0);
+    ok  = true;
+    do 
+    {
+        if (sq_gettype(vm, 1) != OT_CLASS) {
+            break;
+        }
+        if (argc == 4)
+        {
+
+            if (sq_gettype(vm, 2) != OT_STRING) {
+                break;
+            }
+            if (sq_gettype(vm, 3) != OT_STRING) {
+                break;
+            }
+            if (sq_gettype(vm, 4) != OT_INTEGER && sq_gettype(vm, 4) != OT_FLOAT) {
+                break;
+            }
+            if (sq_gettype(vm, 5) != OT_INSTANCE || ! instanceof_cclass(vm, 5, "cocos2d::Size")) {
+                break;
+            }
+
+            std::string arg0;
+            ok &= sqval_to_std_string(vm, 2, &arg0);
+            if (!ok) { break; }
+            std::string arg1;
+            ok &= sqval_to_std_string(vm, 3, &arg1);
+            if (!ok) { break; }
+            float arg2;
+            ok &= sqval_to_float(vm, 4, &arg2);
+            if (!ok) { break; }
+            cocos2d::Size arg3;
+            cocos2d::Size* ptr5 = nullptr; ok &= sqval_to_size(vm, 5, ptr5); arg3 = *ptr5;
+            if (!ok) { break; }
+            cocos2d::Label* ret = cocos2d::Label::createWithTTF(arg0, arg1, arg2, arg3);
+            if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
+                sq_setinstanceup(vm, -1, (SQUserPointer)ret);
+                set_squirrel_object(vm, -1, ret, "cc.Label");
+
+            }
+            return 1;
+        }
+    } while (0);
+    ok  = true;
+    do 
+    {
+        if (sq_gettype(vm, 1) != OT_CLASS) {
+            break;
+        }
+        if (argc == 5)
+        {
+
+            if (sq_gettype(vm, 2) != OT_STRING) {
+                break;
+            }
+            if (sq_gettype(vm, 3) != OT_STRING) {
+                break;
+            }
+            if (sq_gettype(vm, 4) != OT_INTEGER && sq_gettype(vm, 4) != OT_FLOAT) {
+                break;
+            }
+            if (sq_gettype(vm, 5) != OT_INSTANCE || ! instanceof_cclass(vm, 5, "cocos2d::Size")) {
+                break;
+            }
+            if (sq_gettype(vm, 6) != OT_INSTANCE || ! instanceof_cclass(vm, 6, "cocos2d::TextHAlignment")) {
+                break;
+            }
+
+            std::string arg0;
+            ok &= sqval_to_std_string(vm, 2, &arg0);
+            if (!ok) { break; }
+            std::string arg1;
+            ok &= sqval_to_std_string(vm, 3, &arg1);
+            if (!ok) { break; }
+            float arg2;
+            ok &= sqval_to_float(vm, 4, &arg2);
+            if (!ok) { break; }
+            cocos2d::Size arg3;
+            cocos2d::Size* ptr5 = nullptr; ok &= sqval_to_size(vm, 5, ptr5); arg3 = *ptr5;
+            if (!ok) { break; }
+            cocos2d::TextHAlignment arg4;
+            ok &= sqval_to_int32(vm, 6, (int *)&arg4);
+            if (!ok) { break; }
+            cocos2d::Label* ret = cocos2d::Label::createWithTTF(arg0, arg1, arg2, arg3, arg4);
+            if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
+                sq_setinstanceup(vm, -1, (SQUserPointer)ret);
+                set_squirrel_object(vm, -1, ret, "cc.Label");
+
+            }
+            return 1;
+        }
+    } while (0);
+    ok  = true;
+    do 
+    {
+        if (sq_gettype(vm, 1) != OT_CLASS) {
+            break;
+        }
+        if (argc == 6)
+        {
+
+            if (sq_gettype(vm, 2) != OT_STRING) {
+                break;
+            }
+            if (sq_gettype(vm, 3) != OT_STRING) {
+                break;
+            }
+            if (sq_gettype(vm, 4) != OT_INTEGER && sq_gettype(vm, 4) != OT_FLOAT) {
+                break;
+            }
+            if (sq_gettype(vm, 5) != OT_INSTANCE || ! instanceof_cclass(vm, 5, "cocos2d::Size")) {
+                break;
+            }
+            if (sq_gettype(vm, 6) != OT_INSTANCE || ! instanceof_cclass(vm, 6, "cocos2d::TextHAlignment")) {
+                break;
+            }
+            if (sq_gettype(vm, 7) != OT_INSTANCE || ! instanceof_cclass(vm, 7, "cocos2d::TextVAlignment")) {
+                break;
+            }
+
+            std::string arg0;
+            ok &= sqval_to_std_string(vm, 2, &arg0);
+            if (!ok) { break; }
+            std::string arg1;
+            ok &= sqval_to_std_string(vm, 3, &arg1);
+            if (!ok) { break; }
+            float arg2;
+            ok &= sqval_to_float(vm, 4, &arg2);
+            if (!ok) { break; }
+            cocos2d::Size arg3;
+            cocos2d::Size* ptr5 = nullptr; ok &= sqval_to_size(vm, 5, ptr5); arg3 = *ptr5;
+            if (!ok) { break; }
+            cocos2d::TextHAlignment arg4;
+            ok &= sqval_to_int32(vm, 6, (int *)&arg4);
+            if (!ok) { break; }
+            cocos2d::TextVAlignment arg5;
+            ok &= sqval_to_int32(vm, 7, (int *)&arg5);
+            if (!ok) { break; }
+            cocos2d::Label* ret = cocos2d::Label::createWithTTF(arg0, arg1, arg2, arg3, arg4, arg5);
+            if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
+                sq_setinstanceup(vm, -1, (SQUserPointer)ret);
+                set_squirrel_object(vm, -1, ret, "cc.Label");
+
+            }
+            return 1;
+        }
+    } while (0);
+    ok  = true;
+    CCLOG("%s has wrong number of arguments: %d, was expecting %d", "createWithTTF", (int)argc, 3);
+    return 0;
+}
 
 SQInteger squirrel_cocos2dx_Label_typeof_meta(HSQUIRRELVM vm)
 {
@@ -17883,6 +18189,7 @@ int squirrel_register_cocos2dx_Label(HSQUIRRELVM vm)
     to_squirrel_function(vm, "create", squirrel_cocos2dx_Label_create_static, SQTrue);
     to_squirrel_function(vm, "createWithCharMap", squirrel_cocos2dx_Label_createWithCharMap_static, SQTrue);
     to_squirrel_function(vm, "createWithSystemFont", squirrel_cocos2dx_Label_createWithSystemFont_static, SQTrue);
+    to_squirrel_function(vm, "createWithTTF", squirrel_cocos2dx_Label_createWithTTF_static, SQTrue);
 
     to_squirrel_function(vm, "_typeof", squirrel_cocos2dx_Label_typeof_meta);
 

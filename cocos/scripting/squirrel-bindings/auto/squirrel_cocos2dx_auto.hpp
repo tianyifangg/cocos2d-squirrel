@@ -1951,4 +1951,5 @@ int register_all_cocos2dx(HSQUIRRELVM vm);
 
 
 
+
 #endif // __cocos2dx_h__

@@ -37,7 +37,7 @@ class HelloWorld extends cc.Layer {
 
         // add a label shows "Hello World"
         // create and initialize a label
-        local label = cc.LabelTTF.create("Hello World", "Arial", 24)
+        local label = cc.Label.createWithTTF("Hello World", "res/fonts/Marker Felt.ttf", 24)
         // position the label on the center of the screen
         label.setPosition(cc.Vec2(origin.x + visibleSize.width / 2,
                                origin.y + visibleSize.height - label.getContentSize().height))
