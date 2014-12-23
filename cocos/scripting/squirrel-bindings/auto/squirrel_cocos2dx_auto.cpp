@@ -5718,7 +5718,6 @@ SQInteger squirrel_cocos2dx_EaseElasticOut_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.EaseElasticOut");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -5750,7 +5749,6 @@ SQInteger squirrel_cocos2dx_EaseElasticOut_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.EaseElasticOut");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -6010,7 +6008,6 @@ SQInteger squirrel_cocos2dx_TransitionFlipX_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.TransitionFlipX");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -6048,7 +6045,6 @@ SQInteger squirrel_cocos2dx_TransitionFlipX_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.TransitionFlipX");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -11633,10 +11629,10 @@ SQInteger squirrel_cocos2dx_EventListenerCustom_create_static(HSQUIRRELVM vm)
         if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
             sq_setinstanceup(vm, -1, (SQUserPointer)ret);
             set_squirrel_object(vm, -1, ret, "cc.EventListenerCustom");
-            _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
-            sqobj->addClosure("callback3", callback3);
             call_squirrel_closure(vm, - 1, "constructor", false);
         }
+        _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
+        sqobj->addClosure("callback3", callback3);
         return 1;
     }
     CCLOG("%s has wrong number of arguments: %d, was expecting %d\n ", "create", (int)argc, 2);
@@ -11888,7 +11884,6 @@ SQInteger squirrel_cocos2dx_TransitionFlipAngular_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.TransitionFlipAngular");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -11926,7 +11921,6 @@ SQInteger squirrel_cocos2dx_TransitionFlipAngular_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.TransitionFlipAngular");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -12018,7 +12012,6 @@ SQInteger squirrel_cocos2dx_EaseElasticInOut_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.EaseElasticInOut");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -12050,7 +12043,6 @@ SQInteger squirrel_cocos2dx_EaseElasticInOut_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.EaseElasticInOut");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -14297,7 +14289,6 @@ SQInteger squirrel_cocos2dx_MenuItemImage_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemImage");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -14317,7 +14308,6 @@ SQInteger squirrel_cocos2dx_MenuItemImage_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemImage");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -14355,7 +14345,6 @@ SQInteger squirrel_cocos2dx_MenuItemImage_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemImage");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -14406,11 +14395,10 @@ SQInteger squirrel_cocos2dx_MenuItemImage_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemImage");
-                _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
-                sqobj->addClosure("callback4", callback4);
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
+            _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
+            sqobj->addClosure("callback4", callback4);
             return 1;
         }
     } while (0);
@@ -14465,11 +14453,10 @@ SQInteger squirrel_cocos2dx_MenuItemImage_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemImage");
-                _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
-                sqobj->addClosure("callback5", callback5);
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
+            _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
+            sqobj->addClosure("callback5", callback5);
             return 1;
         }
     } while (0);
@@ -14981,11 +14968,10 @@ SQInteger squirrel_cocos2dx_MenuItem_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItem");
-                _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
-                sqobj->addClosure("callback2", callback2);
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
+            _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
+            sqobj->addClosure("callback2", callback2);
             return 1;
         }
     } while (0);
@@ -15003,7 +14989,6 @@ SQInteger squirrel_cocos2dx_MenuItem_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItem");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -15493,7 +15478,6 @@ SQInteger squirrel_cocos2dx_TransitionZoomFlipAngular_create_static(HSQUIRRELVM 
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.TransitionZoomFlipAngular");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -15531,7 +15515,6 @@ SQInteger squirrel_cocos2dx_TransitionZoomFlipAngular_create_static(HSQUIRRELVM 
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.TransitionZoomFlipAngular");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -17636,7 +17619,6 @@ SQInteger squirrel_cocos2dx_Label_createWithCharMap_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Label");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -17680,7 +17662,6 @@ SQInteger squirrel_cocos2dx_Label_createWithCharMap_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Label");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -17706,7 +17687,6 @@ SQInteger squirrel_cocos2dx_Label_createWithCharMap_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Label");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -17844,7 +17824,6 @@ SQInteger squirrel_cocos2dx_Label_createWithTTF_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Label");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -17882,7 +17861,6 @@ SQInteger squirrel_cocos2dx_Label_createWithTTF_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Label");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -17926,7 +17904,6 @@ SQInteger squirrel_cocos2dx_Label_createWithTTF_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Label");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -17964,7 +17941,6 @@ SQInteger squirrel_cocos2dx_Label_createWithTTF_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Label");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -18008,7 +17984,6 @@ SQInteger squirrel_cocos2dx_Label_createWithTTF_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Label");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -18058,7 +18033,6 @@ SQInteger squirrel_cocos2dx_Label_createWithTTF_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Label");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -18114,7 +18088,6 @@ SQInteger squirrel_cocos2dx_Label_createWithTTF_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Label");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -18765,7 +18738,6 @@ SQInteger squirrel_cocos2dx_LabelAtlas_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.LabelAtlas");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -18785,7 +18757,6 @@ SQInteger squirrel_cocos2dx_LabelAtlas_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.LabelAtlas");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -18817,7 +18788,6 @@ SQInteger squirrel_cocos2dx_LabelAtlas_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.LabelAtlas");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -20283,7 +20253,6 @@ SQInteger squirrel_cocos2dx_Scale9Sprite_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "ccui.Scale9Sprite");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -20303,7 +20272,6 @@ SQInteger squirrel_cocos2dx_Scale9Sprite_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "ccui.Scale9Sprite");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -20335,7 +20303,6 @@ SQInteger squirrel_cocos2dx_Scale9Sprite_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "ccui.Scale9Sprite");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -20367,7 +20334,6 @@ SQInteger squirrel_cocos2dx_Scale9Sprite_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "ccui.Scale9Sprite");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -20393,7 +20359,6 @@ SQInteger squirrel_cocos2dx_Scale9Sprite_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "ccui.Scale9Sprite");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -20436,7 +20401,6 @@ SQInteger squirrel_cocos2dx_Scale9Sprite_createWithSpriteFrameName_static(HSQUIR
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "ccui.Scale9Sprite");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -20462,7 +20426,6 @@ SQInteger squirrel_cocos2dx_Scale9Sprite_createWithSpriteFrameName_static(HSQUIR
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "ccui.Scale9Sprite");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -20505,7 +20468,6 @@ SQInteger squirrel_cocos2dx_Scale9Sprite_createWithSpriteFrame_static(HSQUIRRELV
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "ccui.Scale9Sprite");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -20531,7 +20493,6 @@ SQInteger squirrel_cocos2dx_Scale9Sprite_createWithSpriteFrame_static(HSQUIRRELV
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "ccui.Scale9Sprite");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -20877,7 +20838,6 @@ SQInteger squirrel_cocos2dx_EaseElasticIn_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.EaseElasticIn");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -20909,7 +20869,6 @@ SQInteger squirrel_cocos2dx_EaseElasticIn_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.EaseElasticIn");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -21348,11 +21307,10 @@ SQInteger squirrel_cocos2dx_MenuItemSprite_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemSprite");
-                _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
-                sqobj->addClosure("callback4", callback4);
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
+            _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
+            sqobj->addClosure("callback4", callback4);
             return 1;
         }
     } while (0);
@@ -21382,7 +21340,6 @@ SQInteger squirrel_cocos2dx_MenuItemSprite_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemSprite");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -21420,7 +21377,6 @@ SQInteger squirrel_cocos2dx_MenuItemSprite_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemSprite");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -21477,11 +21433,10 @@ SQInteger squirrel_cocos2dx_MenuItemSprite_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemSprite");
-                _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
-                sqobj->addClosure("callback5", callback5);
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
+            _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
+            sqobj->addClosure("callback5", callback5);
             return 1;
         }
     } while (0);
@@ -28942,10 +28897,10 @@ SQInteger squirrel_cocos2dx_EventListenerAcceleration_create_static(HSQUIRRELVM 
         if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
             sq_setinstanceup(vm, -1, (SQUserPointer)ret);
             set_squirrel_object(vm, -1, ret, "cc.EventListenerAcceleration");
-            _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
-            sqobj->addClosure("callback2", callback2);
             call_squirrel_closure(vm, - 1, "constructor", false);
         }
+        _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
+        sqobj->addClosure("callback2", callback2);
         return 1;
     }
     CCLOG("%s has wrong number of arguments: %d, was expecting %d\n ", "create", (int)argc, 1);
@@ -29028,7 +28983,6 @@ SQInteger squirrel_cocos2dx_TiledGrid3D_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.TiledGrid3D");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -29066,7 +29020,6 @@ SQInteger squirrel_cocos2dx_TiledGrid3D_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.TiledGrid3D");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -30521,7 +30474,6 @@ SQInteger squirrel_cocos2dx_LabelTTF_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.LabelTTF");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -30559,7 +30511,6 @@ SQInteger squirrel_cocos2dx_LabelTTF_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.LabelTTF");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -30603,7 +30554,6 @@ SQInteger squirrel_cocos2dx_LabelTTF_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.LabelTTF");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -30653,7 +30603,6 @@ SQInteger squirrel_cocos2dx_LabelTTF_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.LabelTTF");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -30709,7 +30658,6 @@ SQInteger squirrel_cocos2dx_LabelTTF_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.LabelTTF");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -31062,7 +31010,6 @@ SQInteger squirrel_cocos2dx_ClippingNode_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.ClippingNode");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -31082,7 +31029,6 @@ SQInteger squirrel_cocos2dx_ClippingNode_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.ClippingNode");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -37794,7 +37740,6 @@ SQInteger squirrel_cocos2dx_Sprite3D_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Sprite3D");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -37820,7 +37765,6 @@ SQInteger squirrel_cocos2dx_Sprite3D_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Sprite3D");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -39453,7 +39397,6 @@ SQInteger squirrel_cocos2dx_MenuItemLabel_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemLabel");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -39498,11 +39441,10 @@ SQInteger squirrel_cocos2dx_MenuItemLabel_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemLabel");
-                _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
-                sqobj->addClosure("callback3", callback3);
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
+            _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
+            sqobj->addClosure("callback3", callback3);
             return 1;
         }
     } while (0);
@@ -39772,7 +39714,6 @@ SQInteger squirrel_cocos2dx_LayerColor_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.LayerColor");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -39792,7 +39733,6 @@ SQInteger squirrel_cocos2dx_LayerColor_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.LayerColor");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -39818,7 +39758,6 @@ SQInteger squirrel_cocos2dx_LayerColor_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.LayerColor");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -40517,7 +40456,6 @@ SQInteger squirrel_cocos2dx_LayerGradient_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.LayerGradient");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -40537,7 +40475,6 @@ SQInteger squirrel_cocos2dx_LayerGradient_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.LayerGradient");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -40575,7 +40512,6 @@ SQInteger squirrel_cocos2dx_LayerGradient_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.LayerGradient");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -41213,6 +41149,81 @@ SQInteger squirrel_cocos2dx_Node_getChildren(HSQUIRRELVM vm)
     CCLOG("%s has wrong number of arguments: %d, was expecting %d \n", "getChildren", (int)argc, 0);
     return 0;
 }
+SQInteger squirrel_cocos2dx_Node_unschedule(HSQUIRRELVM vm)
+{
+    SQInteger argc = 0;
+    cocos2d::Node* cobj = nullptr;
+    bool ok  = true;
+
+    sq_getinstanceup(vm, 1, (SQUserPointer *)&cobj, 0);
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        CCLOG("invalid 'cobj' in function 'squirrel_cocos2dx_Node_unschedule'");
+        return 0;
+    }
+#endif
+    argc = sq_gettop(vm) - 1;
+    if (argc == 1) 
+    {
+        std::string arg0;
+
+        ok &= sqval_to_std_string(vm, 2, &arg0);
+        if (!ok)
+            return 0;
+        cobj->unschedule(arg0);
+        return 0;
+    }
+    CCLOG("%s has wrong number of arguments: %d, was expecting %d \n", "unschedule", (int)argc, 1);
+    return 0;
+}
+SQInteger squirrel_cocos2dx_Node_scheduleOnce(HSQUIRRELVM vm)
+{
+    SQInteger argc = 0;
+    cocos2d::Node* cobj = nullptr;
+    bool ok  = true;
+
+    sq_getinstanceup(vm, 1, (SQUserPointer *)&cobj, 0);
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        CCLOG("invalid 'cobj' in function 'squirrel_cocos2dx_Node_scheduleOnce'");
+        return 0;
+    }
+#endif
+    argc = sq_gettop(vm) - 1;
+    if (argc == 3) 
+    {
+        std::function<void (float)> arg0;
+        HSQOBJECT callback2;
+        sq_getstackobj(vm, 2, &callback2);
+        float arg1;
+        std::string arg2;
+
+        do {
+			    // Lambda binding for squirrel
+			    arg0 = [vm, callback2](float larg0) -> void {
+			        if (sq_getrefcount(vm, (HSQOBJECT *)&callback2) > 0) {
+			            sq_pushobject(vm, callback2);
+			            sq_push(vm, 1);
+			            sq_pushfloat(vm, (SQFloat)larg0);
+			            sq_call(vm, 2, SQFalse, SQTrue);
+			            sq_poptop(vm);
+			        }
+			    };
+			} while(0);
+
+        ok &= sqval_to_float(vm, 3, &arg1);
+
+        ok &= sqval_to_std_string(vm, 4, &arg2);
+        if (!ok)
+            return 0;
+        cobj->scheduleOnce(arg0, arg1, arg2);
+        return 0;
+    }
+    CCLOG("%s has wrong number of arguments: %d, was expecting %d \n", "scheduleOnce", (int)argc, 3);
+    return 0;
+}
 SQInteger squirrel_cocos2dx_Node_setOnExitCallback(HSQUIRRELVM vm)
 {
     SQInteger argc = 0;
@@ -41554,6 +41565,34 @@ SQInteger squirrel_cocos2dx_Node_setRotationSkewX(HSQUIRRELVM vm)
         return 0;
     }
     CCLOG("%s has wrong number of arguments: %d, was expecting %d \n", "setRotationSkewX", (int)argc, 1);
+    return 0;
+}
+SQInteger squirrel_cocos2dx_Node_scheduleUpdateWithPriority(HSQUIRRELVM vm)
+{
+    SQInteger argc = 0;
+    cocos2d::Node* cobj = nullptr;
+    bool ok  = true;
+
+    sq_getinstanceup(vm, 1, (SQUserPointer *)&cobj, 0);
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        CCLOG("invalid 'cobj' in function 'squirrel_cocos2dx_Node_scheduleUpdateWithPriority'");
+        return 0;
+    }
+#endif
+    argc = sq_gettop(vm) - 1;
+    if (argc == 1) 
+    {
+        int arg0;
+
+        ok &= sqval_to_int32(vm, 2, (int *)&arg0);
+        if (!ok)
+            return 0;
+        cobj->scheduleUpdateWithPriority(arg0);
+        return 0;
+    }
+    CCLOG("%s has wrong number of arguments: %d, was expecting %d \n", "scheduleUpdateWithPriority", (int)argc, 1);
     return 0;
 }
 SQInteger squirrel_cocos2dx_Node_setonEnterTransitionDidFinishCallback(HSQUIRRELVM vm)
@@ -42103,6 +42142,31 @@ SQInteger squirrel_cocos2dx_Node_setonExitTransitionDidStartCallback(HSQUIRRELVM
     CCLOG("%s has wrong number of arguments: %d, was expecting %d \n", "setonExitTransitionDidStartCallback", (int)argc, 1);
     return 0;
 }
+SQInteger squirrel_cocos2dx_Node_unscheduleAllCallbacks(HSQUIRRELVM vm)
+{
+    SQInteger argc = 0;
+    cocos2d::Node* cobj = nullptr;
+    bool ok  = true;
+
+    sq_getinstanceup(vm, 1, (SQUserPointer *)&cobj, 0);
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        CCLOG("invalid 'cobj' in function 'squirrel_cocos2dx_Node_unscheduleAllCallbacks'");
+        return 0;
+    }
+#endif
+    argc = sq_gettop(vm) - 1;
+    if (argc == 0) 
+    {
+        if (!ok)
+            return 0;
+        cobj->unscheduleAllCallbacks();
+        return 0;
+    }
+    CCLOG("%s has wrong number of arguments: %d, was expecting %d \n", "unscheduleAllCallbacks", (int)argc, 0);
+    return 0;
+}
 SQInteger squirrel_cocos2dx_Node_convertTouchToNodeSpace(HSQUIRRELVM vm)
 {
     SQInteger argc = 0;
@@ -42181,6 +42245,31 @@ SQInteger squirrel_cocos2dx_Node_getNodeToParentAffineTransform(HSQUIRRELVM vm)
         return 1;
     }
     CCLOG("%s has wrong number of arguments: %d, was expecting %d \n", "getNodeToParentAffineTransform", (int)argc, 0);
+    return 0;
+}
+SQInteger squirrel_cocos2dx_Node_unscheduleUpdate(HSQUIRRELVM vm)
+{
+    SQInteger argc = 0;
+    cocos2d::Node* cobj = nullptr;
+    bool ok  = true;
+
+    sq_getinstanceup(vm, 1, (SQUserPointer *)&cobj, 0);
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        CCLOG("invalid 'cobj' in function 'squirrel_cocos2dx_Node_unscheduleUpdate'");
+        return 0;
+    }
+#endif
+    argc = sq_gettop(vm) - 1;
+    if (argc == 0) 
+    {
+        if (!ok)
+            return 0;
+        cobj->unscheduleUpdate();
+        return 0;
+    }
+    CCLOG("%s has wrong number of arguments: %d, was expecting %d \n", "unscheduleUpdate", (int)argc, 0);
     return 0;
 }
 SQInteger squirrel_cocos2dx_Node_isCascadeOpacityEnabled(HSQUIRRELVM vm)
@@ -42396,6 +42485,163 @@ SQInteger squirrel_cocos2dx_Node_convertToNodeSpace(HSQUIRRELVM vm)
         return 1;
     }
     CCLOG("%s has wrong number of arguments: %d, was expecting %d \n", "convertToNodeSpace", (int)argc, 1);
+    return 0;
+}
+SQInteger squirrel_cocos2dx_Node_schedule(HSQUIRRELVM vm)
+{
+    SQInteger argc = 0;
+    cocos2d::Node* cobj = nullptr;
+    bool ok  = true;
+
+    sq_getinstanceup(vm, 1, (SQUserPointer *)&cobj, 0);
+#if COCOS2D_DEBUG >= 1
+    if (!cobj)
+    {
+        CCLOG("invalid 'cobj' in function 'squirrel_cocos2dx_Node_schedule'");
+        return 0;
+    }
+#endif
+    argc = sq_gettop(vm) - 1;
+    do {
+        if (argc == 3) {
+            if (sq_gettype(vm, 2) != OT_CLOSURE) {
+                break;
+            }
+            HSQOBJECT callback2;
+            sq_getstackobj(vm, 2, &callback2);
+            if (sq_gettype(vm, 3) != OT_INTEGER && sq_gettype(vm, 3) != OT_FLOAT) {
+                break;
+            }
+            if (sq_gettype(vm, 4) != OT_STRING) {
+                break;
+            }
+
+            std::function<void (float)> arg0;
+            do {
+			    // Lambda binding for squirrel
+			    arg0 = [vm, callback2](float larg0) -> void {
+			        if (sq_getrefcount(vm, (HSQOBJECT *)&callback2) > 0) {
+			            sq_pushobject(vm, callback2);
+			            sq_push(vm, 1);
+			            sq_pushfloat(vm, (SQFloat)larg0);
+			            sq_call(vm, 2, SQFalse, SQTrue);
+			            sq_poptop(vm);
+			        }
+			    };
+			} while(0);
+
+            if (!ok) { break; }
+            float arg1;
+            ok &= sqval_to_float(vm, 3, &arg1);
+
+            if (!ok) { break; }
+            std::string arg2;
+            ok &= sqval_to_std_string(vm, 4, &arg2);
+
+            if (!ok) { break; }
+            cobj->schedule(arg0, arg1, arg2);
+            _SquirrelObject *sqobj = (_SquirrelObject *)cobj->_scriptObject;
+            sqobj->addClosure("callback2", callback2);
+            return 0;
+        }
+    }while(0);
+    ok  = true;
+    do {
+        if (argc == 2) {
+            if (sq_gettype(vm, 2) != OT_CLOSURE) {
+                break;
+            }
+            HSQOBJECT callback2;
+            sq_getstackobj(vm, 2, &callback2);
+            if (sq_gettype(vm, 3) != OT_STRING) {
+                break;
+            }
+
+            std::function<void (float)> arg0;
+            do {
+			    // Lambda binding for squirrel
+			    arg0 = [vm, callback2](float larg0) -> void {
+			        if (sq_getrefcount(vm, (HSQOBJECT *)&callback2) > 0) {
+			            sq_pushobject(vm, callback2);
+			            sq_push(vm, 1);
+			            sq_pushfloat(vm, (SQFloat)larg0);
+			            sq_call(vm, 2, SQFalse, SQTrue);
+			            sq_poptop(vm);
+			        }
+			    };
+			} while(0);
+
+            if (!ok) { break; }
+            std::string arg1;
+            ok &= sqval_to_std_string(vm, 3, &arg1);
+
+            if (!ok) { break; }
+            cobj->schedule(arg0, arg1);
+            _SquirrelObject *sqobj = (_SquirrelObject *)cobj->_scriptObject;
+            sqobj->addClosure("callback2", callback2);
+            return 0;
+        }
+    }while(0);
+    ok  = true;
+    do {
+        if (argc == 5) {
+            if (sq_gettype(vm, 2) != OT_CLOSURE) {
+                break;
+            }
+            HSQOBJECT callback2;
+            sq_getstackobj(vm, 2, &callback2);
+            if (sq_gettype(vm, 3) != OT_INTEGER && sq_gettype(vm, 3) != OT_FLOAT) {
+                break;
+            }
+            if (sq_gettype(vm, 4) != OT_INTEGER && sq_gettype(vm, 4) != OT_FLOAT) {
+                break;
+            }
+            if (sq_gettype(vm, 5) != OT_INTEGER && sq_gettype(vm, 5) != OT_FLOAT) {
+                break;
+            }
+            if (sq_gettype(vm, 6) != OT_STRING) {
+                break;
+            }
+
+            std::function<void (float)> arg0;
+            do {
+			    // Lambda binding for squirrel
+			    arg0 = [vm, callback2](float larg0) -> void {
+			        if (sq_getrefcount(vm, (HSQOBJECT *)&callback2) > 0) {
+			            sq_pushobject(vm, callback2);
+			            sq_push(vm, 1);
+			            sq_pushfloat(vm, (SQFloat)larg0);
+			            sq_call(vm, 2, SQFalse, SQTrue);
+			            sq_poptop(vm);
+			        }
+			    };
+			} while(0);
+
+            if (!ok) { break; }
+            float arg1;
+            ok &= sqval_to_float(vm, 3, &arg1);
+
+            if (!ok) { break; }
+            unsigned int arg2;
+            ok &= sqval_to_uint32(vm, 4, &arg2);
+
+            if (!ok) { break; }
+            float arg3;
+            ok &= sqval_to_float(vm, 5, &arg3);
+
+            if (!ok) { break; }
+            std::string arg4;
+            ok &= sqval_to_std_string(vm, 6, &arg4);
+
+            if (!ok) { break; }
+            cobj->schedule(arg0, arg1, arg2, arg3, arg4);
+            _SquirrelObject *sqobj = (_SquirrelObject *)cobj->_scriptObject;
+            sqobj->addClosure("callback2", callback2);
+            return 0;
+        }
+    }while(0);
+    ok  = true;
+    CCLOG("%s has wrong number of arguments: %d, was expecting %d \n", "schedule", (int)argc, 5);
     return 0;
 }
 SQInteger squirrel_cocos2dx_Node_removeAllChildrenWithCleanup(HSQUIRRELVM vm)
@@ -43030,6 +43276,37 @@ SQInteger squirrel_cocos2dx_Node_isOpacityModifyRGB(HSQUIRRELVM vm)
         return 1;
     }
     CCLOG("%s has wrong number of arguments: %d, was expecting %d \n", "isOpacityModifyRGB", (int)argc, 0);
+    return 0;
+}
+SQInteger squirrel_cocos2dx_Node_scheduleUpdateWithPriorityLua(HSQUIRRELVM vm)
+{
+    SQInteger argc = 0;
+    cocos2d::Node* cobj = nullptr;
+    bool ok  = true;
+
+    sq_getinstanceup(vm, 1, (SQUserPointer *)&cobj, 0);
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        CCLOG("invalid 'cobj' in function 'squirrel_cocos2dx_Node_scheduleUpdateWithPriorityLua'");
+        return 0;
+    }
+#endif
+    argc = sq_gettop(vm) - 1;
+    if (argc == 2) 
+    {
+        int arg0;
+        int arg1;
+
+        ok &= sqval_to_int32(vm, 2, (int *)&arg0);
+
+        ok &= sqval_to_int32(vm, 3, (int *)&arg1);
+        if (!ok)
+            return 0;
+        cobj->scheduleUpdateWithPriorityLua(arg0, arg1);
+        return 0;
+    }
+    CCLOG("%s has wrong number of arguments: %d, was expecting %d \n", "scheduleUpdateWithPriorityLua", (int)argc, 2);
     return 0;
 }
 SQInteger squirrel_cocos2dx_Node_getRotation(HSQUIRRELVM vm)
@@ -45004,6 +45281,31 @@ SQInteger squirrel_cocos2dx_Node_isCascadeColorEnabled(HSQUIRRELVM vm)
     CCLOG("%s has wrong number of arguments: %d, was expecting %d \n", "isCascadeColorEnabled", (int)argc, 0);
     return 0;
 }
+SQInteger squirrel_cocos2dx_Node_scheduleUpdate(HSQUIRRELVM vm)
+{
+    SQInteger argc = 0;
+    cocos2d::Node* cobj = nullptr;
+    bool ok  = true;
+
+    sq_getinstanceup(vm, 1, (SQUserPointer *)&cobj, 0);
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        CCLOG("invalid 'cobj' in function 'squirrel_cocos2dx_Node_scheduleUpdate'");
+        return 0;
+    }
+#endif
+    argc = sq_gettop(vm) - 1;
+    if (argc == 0) 
+    {
+        if (!ok)
+            return 0;
+        cobj->scheduleUpdate();
+        return 0;
+    }
+    CCLOG("%s has wrong number of arguments: %d, was expecting %d \n", "scheduleUpdate", (int)argc, 0);
+    return 0;
+}
 SQInteger squirrel_cocos2dx_Node_stopAction(HSQUIRRELVM vm)
 {
     SQInteger argc = 0;
@@ -45133,6 +45435,8 @@ int squirrel_register_cocos2dx_Node(HSQUIRRELVM vm)
     to_squirrel_function(vm, "setOpacityModifyRGB", squirrel_cocos2dx_Node_setOpacityModifyRGB);
     to_squirrel_function(vm, "setCascadeOpacityEnabled", squirrel_cocos2dx_Node_setCascadeOpacityEnabled);
     to_squirrel_function(vm, "getChildren", squirrel_cocos2dx_Node_getChildren);
+    to_squirrel_function(vm, "unschedule", squirrel_cocos2dx_Node_unschedule);
+    to_squirrel_function(vm, "scheduleOnce", squirrel_cocos2dx_Node_scheduleOnce);
     to_squirrel_function(vm, "setOnExitCallback", squirrel_cocos2dx_Node_setOnExitCallback);
     to_squirrel_function(vm, "pause", squirrel_cocos2dx_Node_pause);
     to_squirrel_function(vm, "convertToWorldSpaceAR", squirrel_cocos2dx_Node_convertToWorldSpaceAR);
@@ -45145,6 +45449,7 @@ int squirrel_register_cocos2dx_Node(HSQUIRRELVM vm)
     to_squirrel_function(vm, "setScaleY", squirrel_cocos2dx_Node_setScaleY);
     to_squirrel_function(vm, "setScaleX", squirrel_cocos2dx_Node_setScaleX);
     to_squirrel_function(vm, "setRotationSkewX", squirrel_cocos2dx_Node_setRotationSkewX);
+    to_squirrel_function(vm, "scheduleUpdateWithPriority", squirrel_cocos2dx_Node_scheduleUpdateWithPriority);
     to_squirrel_function(vm, "setonEnterTransitionDidFinishCallback", squirrel_cocos2dx_Node_setonEnterTransitionDidFinishCallback);
     to_squirrel_function(vm, "removeFromPhysicsWorld", squirrel_cocos2dx_Node_removeFromPhysicsWorld);
     to_squirrel_function(vm, "removeAllComponents", squirrel_cocos2dx_Node_removeAllComponents);
@@ -45163,9 +45468,11 @@ int squirrel_register_cocos2dx_Node(HSQUIRRELVM vm)
     to_squirrel_function(vm, "setOnEnterCallback", squirrel_cocos2dx_Node_setOnEnterCallback);
     to_squirrel_function(vm, "setNormalizedPosition", squirrel_cocos2dx_Node_setNormalizedPosition);
     to_squirrel_function(vm, "setonExitTransitionDidStartCallback", squirrel_cocos2dx_Node_setonExitTransitionDidStartCallback);
+    to_squirrel_function(vm, "unscheduleAllCallbacks", squirrel_cocos2dx_Node_unscheduleAllCallbacks);
     to_squirrel_function(vm, "convertTouchToNodeSpace", squirrel_cocos2dx_Node_convertTouchToNodeSpace);
     to_squirrel_function(vm, "removeAllChildren", squirrel_cocos2dx_Node_removeAllChildren);
     to_squirrel_function(vm, "getNodeToParentAffineTransform", squirrel_cocos2dx_Node_getNodeToParentAffineTransform);
+    to_squirrel_function(vm, "unscheduleUpdate", squirrel_cocos2dx_Node_unscheduleUpdate);
     to_squirrel_function(vm, "isCascadeOpacityEnabled", squirrel_cocos2dx_Node_isCascadeOpacityEnabled);
     to_squirrel_function(vm, "setParent", squirrel_cocos2dx_Node_setParent);
     to_squirrel_function(vm, "getName", squirrel_cocos2dx_Node_getName);
@@ -45174,6 +45481,7 @@ int squirrel_register_cocos2dx_Node(HSQUIRRELVM vm)
     to_squirrel_function(vm, "getNodeToParentTransform", squirrel_cocos2dx_Node_getNodeToParentTransform);
     to_squirrel_function(vm, "convertTouchToNodeSpaceAR", squirrel_cocos2dx_Node_convertTouchToNodeSpaceAR);
     to_squirrel_function(vm, "convertToNodeSpace", squirrel_cocos2dx_Node_convertToNodeSpace);
+    to_squirrel_function(vm, "schedule", squirrel_cocos2dx_Node_schedule);
     to_squirrel_function(vm, "removeAllChildrenWithCleanup", squirrel_cocos2dx_Node_removeAllChildrenWithCleanup);
     to_squirrel_function(vm, "removeFromParentAndCleanup", squirrel_cocos2dx_Node_removeFromParentAndCleanup);
     to_squirrel_function(vm, "getPhysicsBody", squirrel_cocos2dx_Node_getPhysicsBody);
@@ -45196,6 +45504,7 @@ int squirrel_register_cocos2dx_Node(HSQUIRRELVM vm)
     to_squirrel_function(vm, "addComponent", squirrel_cocos2dx_Node_addComponent);
     to_squirrel_function(vm, "runAction", squirrel_cocos2dx_Node_runAction);
     to_squirrel_function(vm, "isOpacityModifyRGB", squirrel_cocos2dx_Node_isOpacityModifyRGB);
+    to_squirrel_function(vm, "scheduleUpdateWithPriorityLua", squirrel_cocos2dx_Node_scheduleUpdateWithPriorityLua);
     to_squirrel_function(vm, "getRotation", squirrel_cocos2dx_Node_getRotation);
     to_squirrel_function(vm, "getAnchorPointInPoints", squirrel_cocos2dx_Node_getAnchorPointInPoints);
     to_squirrel_function(vm, "visit", squirrel_cocos2dx_Node_visit);
@@ -45263,6 +45572,7 @@ int squirrel_register_cocos2dx_Node(HSQUIRRELVM vm)
     to_squirrel_function(vm, "getRotationSkewY", squirrel_cocos2dx_Node_getRotationSkewY);
     to_squirrel_function(vm, "setTag", squirrel_cocos2dx_Node_setTag);
     to_squirrel_function(vm, "isCascadeColorEnabled", squirrel_cocos2dx_Node_isCascadeColorEnabled);
+    to_squirrel_function(vm, "scheduleUpdate", squirrel_cocos2dx_Node_scheduleUpdate);
     to_squirrel_function(vm, "stopAction", squirrel_cocos2dx_Node_stopAction);
     to_squirrel_function(vm, "getActionManager", squirrel_cocos2dx_Node_getActionManager);
     to_squirrel_function(vm, "create", squirrel_cocos2dx_Node_create_static, SQTrue);
@@ -45603,7 +45913,6 @@ SQInteger squirrel_cocos2dx_TransitionFlipY_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.TransitionFlipY");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -45641,7 +45950,6 @@ SQInteger squirrel_cocos2dx_TransitionFlipY_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.TransitionFlipY");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -45801,7 +46109,6 @@ SQInteger squirrel_cocos2dx_TurnOffTiles_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.TurnOffTiles");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -45833,7 +46140,6 @@ SQInteger squirrel_cocos2dx_TurnOffTiles_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.TurnOffTiles");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -49000,7 +49306,6 @@ SQInteger squirrel_cocos2dx_RotateTo_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.RotateTo");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -49038,7 +49343,6 @@ SQInteger squirrel_cocos2dx_RotateTo_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.RotateTo");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -49070,7 +49374,6 @@ SQInteger squirrel_cocos2dx_RotateTo_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.RotateTo");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -49956,7 +50259,6 @@ SQInteger squirrel_cocos2dx_Menu_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Menu");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -49981,7 +50283,6 @@ SQInteger squirrel_cocos2dx_Menu_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Menu");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -50012,7 +50313,6 @@ SQInteger squirrel_cocos2dx_Menu_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Menu");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -50049,7 +50349,6 @@ SQInteger squirrel_cocos2dx_Menu_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Menu");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -50092,7 +50391,6 @@ SQInteger squirrel_cocos2dx_Menu_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Menu");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -50141,7 +50439,6 @@ SQInteger squirrel_cocos2dx_Menu_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Menu");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -50196,7 +50493,6 @@ SQInteger squirrel_cocos2dx_Menu_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Menu");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -50257,7 +50553,6 @@ SQInteger squirrel_cocos2dx_Menu_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Menu");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -50324,7 +50619,6 @@ SQInteger squirrel_cocos2dx_Menu_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Menu");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -50397,7 +50691,6 @@ SQInteger squirrel_cocos2dx_Menu_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Menu");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -50417,7 +50710,6 @@ SQInteger squirrel_cocos2dx_Menu_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Menu");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -51054,7 +51346,6 @@ SQInteger squirrel_cocos2dx_SpriteFrame_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.SpriteFrame");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -51086,7 +51377,6 @@ SQInteger squirrel_cocos2dx_SpriteFrame_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.SpriteFrame");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -51147,7 +51437,6 @@ SQInteger squirrel_cocos2dx_SpriteFrame_createWithTexture_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.SpriteFrame");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -51179,7 +51468,6 @@ SQInteger squirrel_cocos2dx_SpriteFrame_createWithTexture_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.SpriteFrame");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -52317,7 +52605,6 @@ SQInteger squirrel_cocos2dx_TransitionZoomFlipX_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.TransitionZoomFlipX");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -52355,7 +52642,6 @@ SQInteger squirrel_cocos2dx_TransitionZoomFlipX_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.TransitionZoomFlipX");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -55010,7 +55296,6 @@ SQInteger squirrel_cocos2dx_GridBase_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.GridBase");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -55048,7 +55333,6 @@ SQInteger squirrel_cocos2dx_GridBase_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.GridBase");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -55163,7 +55447,6 @@ SQInteger squirrel_cocos2dx_ScaleTo_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.ScaleTo");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -55195,7 +55478,6 @@ SQInteger squirrel_cocos2dx_ScaleTo_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.ScaleTo");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -55239,7 +55521,6 @@ SQInteger squirrel_cocos2dx_ScaleTo_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.ScaleTo");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -56161,7 +56442,6 @@ SQInteger squirrel_cocos2dx_Grid3D_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Grid3D");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -56199,7 +56479,6 @@ SQInteger squirrel_cocos2dx_Grid3D_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Grid3D");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -56396,7 +56675,6 @@ SQInteger squirrel_cocos2dx_ParticleSystemQuad_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.ParticleSystemQuad");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -56416,7 +56694,6 @@ SQInteger squirrel_cocos2dx_ParticleSystemQuad_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.ParticleSystemQuad");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -56442,7 +56719,6 @@ SQInteger squirrel_cocos2dx_ParticleSystemQuad_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.ParticleSystemQuad");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -57467,6 +57743,8 @@ SQInteger squirrel_cocos2dx_RenderTexture_saveToFile(HSQUIRRELVM vm)
             if (!ok) { break; }
             bool ret = cobj->saveToFile(arg0, arg1, arg2, arg3);
             sq_pushbool(vm, (SQBool)ret);
+            _SquirrelObject *sqobj = (_SquirrelObject *)cobj->_scriptObject;
+            sqobj->addClosure("callback5", callback5);
             return 1;
         }
     }while(0);
@@ -57550,6 +57828,8 @@ SQInteger squirrel_cocos2dx_RenderTexture_saveToFile(HSQUIRRELVM vm)
             if (!ok) { break; }
             bool ret = cobj->saveToFile(arg0, arg1, arg2);
             sq_pushbool(vm, (SQBool)ret);
+            _SquirrelObject *sqobj = (_SquirrelObject *)cobj->_scriptObject;
+            sqobj->addClosure("callback4", callback4);
             return 1;
         }
     }while(0);
@@ -58091,7 +58371,6 @@ SQInteger squirrel_cocos2dx_RenderTexture_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.RenderTexture");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -58135,7 +58414,6 @@ SQInteger squirrel_cocos2dx_RenderTexture_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.RenderTexture");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -58167,7 +58445,6 @@ SQInteger squirrel_cocos2dx_RenderTexture_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.RenderTexture");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -59485,7 +59762,6 @@ SQInteger squirrel_cocos2dx_TransitionZoomFlipY_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.TransitionZoomFlipY");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -59523,7 +59799,6 @@ SQInteger squirrel_cocos2dx_TransitionZoomFlipY_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.TransitionZoomFlipY");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -59627,7 +59902,6 @@ SQInteger squirrel_cocos2dx_ScaleBy_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.ScaleBy");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -59659,7 +59933,6 @@ SQInteger squirrel_cocos2dx_ScaleBy_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.ScaleBy");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -59703,7 +59976,6 @@ SQInteger squirrel_cocos2dx_ScaleBy_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.ScaleBy");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -60316,7 +60588,6 @@ SQInteger squirrel_cocos2dx_Animation_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Animation");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -60354,7 +60625,6 @@ SQInteger squirrel_cocos2dx_Animation_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Animation");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -60374,7 +60644,6 @@ SQInteger squirrel_cocos2dx_Animation_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Animation");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -61960,11 +62229,10 @@ SQInteger squirrel_cocos2dx_MenuItemAtlasFont_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemAtlasFont");
-                _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
-                sqobj->addClosure("callback7", callback7);
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
+            _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
+            sqobj->addClosure("callback7", callback7);
             return 1;
         }
     } while (0);
@@ -62012,7 +62280,6 @@ SQInteger squirrel_cocos2dx_MenuItemAtlasFont_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemAtlasFont");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -63224,7 +63491,6 @@ SQInteger squirrel_cocos2dx_TransitionFade_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.TransitionFade");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -63262,7 +63528,6 @@ SQInteger squirrel_cocos2dx_TransitionFade_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.TransitionFade");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -65059,7 +65324,6 @@ SQInteger squirrel_cocos2dx_Animate3D_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Animate3D");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -65085,7 +65349,6 @@ SQInteger squirrel_cocos2dx_Animate3D_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Animate3D");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -65396,11 +65659,10 @@ SQInteger squirrel_cocos2dx_MenuItemFont_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemFont");
-                _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
-                sqobj->addClosure("callback3", callback3);
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
+            _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
+            sqobj->addClosure("callback3", callback3);
             return 1;
         }
     } while (0);
@@ -65418,7 +65680,6 @@ SQInteger squirrel_cocos2dx_MenuItemFont_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemFont");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -65444,7 +65705,6 @@ SQInteger squirrel_cocos2dx_MenuItemFont_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemFont");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -66136,7 +66396,6 @@ SQInteger squirrel_cocos2dx_MenuItemToggle_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemToggle");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -66156,7 +66415,6 @@ SQInteger squirrel_cocos2dx_MenuItemToggle_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemToggle");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -66212,11 +66470,10 @@ SQInteger squirrel_cocos2dx_MenuItemToggle_createWithCallback_static(HSQUIRRELVM
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemToggle");
-                _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
-                sqobj->addClosure("callback2", callback2);
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
+            _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
+            sqobj->addClosure("callback2", callback2);
             return 1;
         }
         if (argc == 3)
@@ -66258,11 +66515,10 @@ SQInteger squirrel_cocos2dx_MenuItemToggle_createWithCallback_static(HSQUIRRELVM
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemToggle");
-                _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
-                sqobj->addClosure("callback2", callback2);
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
+            _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
+            sqobj->addClosure("callback2", callback2);
             return 1;
         }
         if (argc == 4)
@@ -66310,11 +66566,10 @@ SQInteger squirrel_cocos2dx_MenuItemToggle_createWithCallback_static(HSQUIRRELVM
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemToggle");
-                _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
-                sqobj->addClosure("callback2", callback2);
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
+            _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
+            sqobj->addClosure("callback2", callback2);
             return 1;
         }
         if (argc == 5)
@@ -66368,11 +66623,10 @@ SQInteger squirrel_cocos2dx_MenuItemToggle_createWithCallback_static(HSQUIRRELVM
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemToggle");
-                _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
-                sqobj->addClosure("callback2", callback2);
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
+            _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
+            sqobj->addClosure("callback2", callback2);
             return 1;
         }
         if (argc == 6)
@@ -66432,11 +66686,10 @@ SQInteger squirrel_cocos2dx_MenuItemToggle_createWithCallback_static(HSQUIRRELVM
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemToggle");
-                _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
-                sqobj->addClosure("callback2", callback2);
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
+            _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
+            sqobj->addClosure("callback2", callback2);
             return 1;
         }
         if (argc == 7)
@@ -66502,11 +66755,10 @@ SQInteger squirrel_cocos2dx_MenuItemToggle_createWithCallback_static(HSQUIRRELVM
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemToggle");
-                _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
-                sqobj->addClosure("callback2", callback2);
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
+            _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
+            sqobj->addClosure("callback2", callback2);
             return 1;
         }
         if (argc == 8)
@@ -66578,11 +66830,10 @@ SQInteger squirrel_cocos2dx_MenuItemToggle_createWithCallback_static(HSQUIRRELVM
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemToggle");
-                _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
-                sqobj->addClosure("callback2", callback2);
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
+            _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
+            sqobj->addClosure("callback2", callback2);
             return 1;
         }
         if (argc == 9)
@@ -66660,11 +66911,10 @@ SQInteger squirrel_cocos2dx_MenuItemToggle_createWithCallback_static(HSQUIRRELVM
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemToggle");
-                _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
-                sqobj->addClosure("callback2", callback2);
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
+            _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
+            sqobj->addClosure("callback2", callback2);
             return 1;
         }
         if (argc == 10)
@@ -66748,11 +66998,10 @@ SQInteger squirrel_cocos2dx_MenuItemToggle_createWithCallback_static(HSQUIRRELVM
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemToggle");
-                _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
-                sqobj->addClosure("callback2", callback2);
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
+            _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
+            sqobj->addClosure("callback2", callback2);
             return 1;
         }
         if (argc == 11)
@@ -66842,11 +67091,10 @@ SQInteger squirrel_cocos2dx_MenuItemToggle_createWithCallback_static(HSQUIRRELVM
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemToggle");
-                _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
-                sqobj->addClosure("callback2", callback2);
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
+            _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
+            sqobj->addClosure("callback2", callback2);
             return 1;
         }
     } while (0);
@@ -66889,11 +67137,10 @@ SQInteger squirrel_cocos2dx_MenuItemToggle_createWithCallback_static(HSQUIRRELVM
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MenuItemToggle");
-                _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
-                sqobj->addClosure("callback2", callback2);
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
+            _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
+            sqobj->addClosure("callback2", callback2);
             return 1;
         }
     } while (0);
@@ -67997,7 +68244,6 @@ SQInteger squirrel_cocos2dx_MotionStreak_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MotionStreak");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -68047,7 +68293,6 @@ SQInteger squirrel_cocos2dx_MotionStreak_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.MotionStreak");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -68157,7 +68402,6 @@ SQInteger squirrel_cocos2dx_RotateBy_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.RotateBy");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -68189,7 +68433,6 @@ SQInteger squirrel_cocos2dx_RotateBy_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.RotateBy");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -68221,7 +68464,6 @@ SQInteger squirrel_cocos2dx_RotateBy_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.RotateBy");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -69993,7 +70235,6 @@ SQInteger squirrel_cocos2dx_Sprite_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Sprite");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -70013,7 +70254,6 @@ SQInteger squirrel_cocos2dx_Sprite_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Sprite");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -70045,7 +70285,6 @@ SQInteger squirrel_cocos2dx_Sprite_create_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Sprite");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -70088,7 +70327,6 @@ SQInteger squirrel_cocos2dx_Sprite_createWithTexture_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Sprite");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -70126,7 +70364,6 @@ SQInteger squirrel_cocos2dx_Sprite_createWithTexture_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Sprite");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;
@@ -70152,7 +70389,6 @@ SQInteger squirrel_cocos2dx_Sprite_createWithTexture_static(HSQUIRRELVM vm)
             if (SQ_SUCCEEDED(sq_createinstance(vm, 1))) {
                 sq_setinstanceup(vm, -1, (SQUserPointer)ret);
                 set_squirrel_object(vm, -1, ret, "cc.Sprite");
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
             return 1;

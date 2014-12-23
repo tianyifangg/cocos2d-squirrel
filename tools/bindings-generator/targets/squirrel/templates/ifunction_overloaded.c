@@ -80,16 +80,16 @@ SQInteger ${signature_name}(HSQUIRRELVM vm)
         #if $is_ref_class
             cobj->retain();
             sq_setreleasehook(vm, 1, squirrel_releasehook_Ref);
-                #for callback_str in $callback_array
-                _SquirrelObject *sqobj = (_SquirrelObject *)cobj->_scriptObject;
-                sqobj->addClosure("${callback_str}", ${callback_str});
-                #end for
         #else
             sq_setreleasehook(vm, 1, squirrel_releasehook_${class_name});
         #end if
     #else
             // TODO
     #end if
+            #for callback_str in $callback_array
+            _SquirrelObject *sqobj = (_SquirrelObject *)cobj->_scriptObject;
+            sqobj->addClosure("${callback_str}", ${callback_str});
+            #end for
             return 1;
         #else
             #if $func.ret_type.name != "void"
@@ -102,9 +102,17 @@ SQInteger ${signature_name}(HSQUIRRELVM vm)
                                          "in_value": "ret",
                                          "ntype": $func.ret_type,
                                          "scriptname": $generator.scriptname_from_native_type($func.ret_type)})};
+            #for callback_str in $callback_array
+            _SquirrelObject *sqobj = (_SquirrelObject *)cobj->_scriptObject;
+            sqobj->addClosure("${callback_str}", ${callback_str});
+            #end for
             return 1;
             #else
             cobj->${func.func_name}($arg_list);
+            #for callback_str in $callback_array
+            _SquirrelObject *sqobj = (_SquirrelObject *)cobj->_scriptObject;
+            sqobj->addClosure("${callback_str}", ${callback_str});
+            #end for
             return 0;
             #end if
         #end if

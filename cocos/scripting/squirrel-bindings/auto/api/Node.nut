@@ -61,6 +61,20 @@
 -- @return array_table#array_table ret (retunr value: array_table)
 
 --------------------------------
+-- @function [parent=#Node] unschedule 
+-- @param self
+-- @param #string str
+-- @return void#void ret (return value: void)
+        
+--------------------------------
+-- @function [parent=#Node] scheduleOnce 
+-- @param self
+-- @param #function func
+-- @param #float float
+-- @param #string str
+-- @return void#void ret (return value: void)
+        
+--------------------------------
 -- @function [parent=#Node] setOnExitCallback 
 -- @param self
 -- @param #function func
@@ -127,6 +141,12 @@
 -- @function [parent=#Node] setRotationSkewX 
 -- @param self
 -- @param #float float
+-- @return void#void ret (return value: void)
+        
+--------------------------------
+-- @function [parent=#Node] scheduleUpdateWithPriority 
+-- @param self
+-- @param #int int
 -- @return void#void ret (return value: void)
         
 --------------------------------
@@ -231,6 +251,11 @@
 -- @return void#void ret (return value: void)
         
 --------------------------------
+-- @function [parent=#Node] unscheduleAllCallbacks 
+-- @param self
+-- @return void#void ret (return value: void)
+        
+--------------------------------
 -- @function [parent=#Node] convertTouchToNodeSpace 
 -- @param self
 -- @param #cc.Touch touch
@@ -245,6 +270,11 @@
 -- @function [parent=#Node] getNodeToParentAffineTransform 
 -- @param self
 -- @return AffineTransform#AffineTransform ret (return value: cc.AffineTransform)
+        
+--------------------------------
+-- @function [parent=#Node] unscheduleUpdate 
+-- @param self
+-- @return void#void ret (return value: void)
         
 --------------------------------
 -- @function [parent=#Node] isCascadeOpacityEnabled 
@@ -289,6 +319,19 @@
 -- @param #vec2_table vec2
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         
+--------------------------------
+-- @overload self, function, float, string         
+-- @overload self, function, string         
+-- @overload self, function, float, unsigned int, float, string         
+-- @function [parent=#Node] schedule
+-- @param self
+-- @param #function func
+-- @param #float float
+-- @param #unsigned int int
+-- @param #float float
+-- @param #string str
+-- @return void#void ret (retunr value: void)
+
 --------------------------------
 -- @function [parent=#Node] removeAllChildrenWithCleanup 
 -- @param self
@@ -417,6 +460,13 @@
 -- @function [parent=#Node] isOpacityModifyRGB 
 -- @param self
 -- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+-- @function [parent=#Node] scheduleUpdateWithPriorityLua 
+-- @param self
+-- @param #int int
+-- @param #int int
+-- @return void#void ret (return value: void)
         
 --------------------------------
 -- @function [parent=#Node] getRotation 
@@ -805,6 +855,11 @@
 -- @function [parent=#Node] isCascadeColorEnabled 
 -- @param self
 -- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+-- @function [parent=#Node] scheduleUpdate 
+-- @param self
+-- @return void#void ret (return value: void)
         
 --------------------------------
 -- @function [parent=#Node] stopAction 

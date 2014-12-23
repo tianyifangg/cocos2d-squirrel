@@ -110,11 +110,6 @@ SQInteger ${signature_name}_static(HSQUIRRELVM vm)
     #if $generator.script_control_cpp
                 // TODO: 
     #end if
-                #for callback_str in $callback_array
-                _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
-                sqobj->addClosure("${callback_str}", ${callback_str});
-                #end for
-
                 call_squirrel_closure(vm, - 1, "constructor", false);
             }
 #else
@@ -123,9 +118,17 @@ SQInteger ${signature_name}_static(HSQUIRRELVM vm)
                                          "ntype": $func.ret_type,
                                          "scriptname": $generator.scriptname_from_native_type($func.ret_type)})};
 #end if
+            #for callback_str in $callback_array
+            _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
+            sqobj->addClosure("${callback_str}", ${callback_str});
+            #end for
             return 1;
             #else
             ${namespaced_class_name}::${func.func_name}($arg_list);
+            #for callback_str in $callback_array
+            _SquirrelObject *sqobj = (_SquirrelObject *)ret->_scriptObject;
+            sqobj->addClosure("${callback_str}", ${callback_str});
+            #end for
             return 0;
             #end if
         }
